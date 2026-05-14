@@ -1,0 +1,421 @@
+body {
+	font-family: Arial;
+	margin: 0;
+	flex: 1; 
+} 
+.page-header { 
+	background-color: #D2B48C; 
+	padding: 60px 30px; 	
+	text-align: center; 
+	margin-bottom: 30px; 
+	margin-top:60px;
+} 
+h1,h2,h3,.price { 
+	font-family: 'Times New Roman', serif; 
+} 
+.page-title { 
+	color: #5A1F0F; 
+	font-size: 50px; 
+	letter-spacing: 2px;
+} 
+.main { 
+	display: flex; 
+	margin: 40px auto;	
+} 
+.products { 
+	display: grid; 
+	grid-template-columns: repeat(4, 1fr); 
+	padding: 30px; 
+	flex: 1; 
+	gap: 20px 100px; 
+} 
+.card { 
+	width: 100%;
+	text-align: center;
+	border: 1px solid #eee; 
+	padding: 0px;
+	transition: 0.5s; 
+ } 
+ .card img { 
+	width: 100%;
+	margin: 0 auto;
+ } 
+ .card:hover { 
+	transform: translateY(-10px); 
+ } 
+ .price { 
+	color: #5A1F0F; 
+	font-weight: bold; 
+ } 
+ .row-title { 
+	grid-column: 1 / -1;
+	text-align: center; 
+	font-size: 40px; 
+	font-weight: bold; 
+	font-family: Pacifico; 
+	margin: 20px 0; 
+	color: #5A1F0F; 
+	letter-spacing: 2px;
+ }
+ .add-cart {
+    background: #5A1F0F;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.5s;
+}
+.add-cart:hover {
+    background:#D2B48C ;
+}
+
+
+/** minh anh **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Cao bằng màn hình */
+	/* Nền tối để nếu ảnh lỗi vẫn thấy chữ */
+}
+
+.imgbanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* ĐÂY LÀ CHỖ CHỈNH ẢNH DỊCH LÊN/XUỐNG */
+    /* top: ảnh dính lề trên, center: ở giữa, bottom: dính lề dưới */
+    object-position: middle; 
+}
+
+/* 1. Xóa lề thừa và cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Xử lý tiêu đề (Chọn class có dấu cách) */
+.BEST-SELLER {
+    text-align: center;
+}
+
+.best {
+    font-size: 60px;
+    color: #5A1F0F;
+	font-style: sans-serif;
+    letter-spacing: 2px;
+	margin-bottom: 15px;
+	padding: 40px;
+}
+
+/* 3. BỐ CỤC GRID QUAN TRỌNG NHẤT */
+.product {
+    display: grid;
+    /* Chia làm 3 cột: 1fr là 1 phần bằng nhau, 1.3fr cho cột cuối to hơn */
+    grid-template-columns: 1fr 1fr 1.3fr;
+    /* Khoảng cách giữa các món bánh */
+    gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.item:hover,
+.big-item:hover {
+    transform: translateY(-10px);
+}
+/* 4. Định dạng các ô sản phẩm */
+.item, .big-item {
+    display: flex;
+    flex-direction: column;
+	transition: 0.5s;
+}
+
+.item img, .big-item img {
+    width: 100%;
+    object-fit: cover; /* Để ảnh không bị móp méo */
+    display: block;
+}
+
+/* Chiều cao cố định cho các ảnh nhỏ để đều nhau */
+.item img {
+    height: 300px; 
+}
+
+/* 5. CẤU HÌNH CHO CÁI BÁNH TO (ảnh 5) */
+.big-item {
+    /* Nằm ở cột 3 */
+    grid-column: 3;
+    /* Kéo dài từ hàng 1 đến hết hàng 2 */
+    grid-row: 1 / span 2;
+}
+
+/* Ảnh của cái bánh to phải cao bằng 2 cái bánh nhỏ cộng lại */
+.big-item img {
+    height: calc(600px + 30px + 60px); /* 2 lần ảnh nhỏ + gap + bù trừ text */
+    /* Hoặc dùng đơn giản là height: 100% nếu bạn muốn nó tự co giãn */
+}
+
+
+/* 6. Chỉnh chữ tên bánh và giá */
+.name {
+    margin-top: 15px;
+    color: #696969;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: #7A2E1B;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; 
+    padding: 0px 10px;
+	margin-top: 0px;
+	letter-spacing: 2px;
+}
+
+h2.location {
+    flex: 0 0 100%;
+    font-size: 55px;
+    color: #5A1F0F;
+    margin:10px;
+	padding: 40px;
+}
+
+.map-box {
+    flex: 1; 
+}
+
+.information {
+    margin-top: 0px;
+	margin-right: 100px;
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+	line-height: 1.6;
+}
+
+.map-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+.address{
+	font-family: Arial;
+    font-size: 20px;   
+    gap: 0.5px;	
+}
+.address-detail{
+    color: #5A1F0F;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: capitalize;
+}
+.hours {
+	width:100%;
+	max-width: 500px;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.hours-infor strong {
+    font-size: 25px;
+    color: #5A1F0F;
+    display: block;
+    margin: 10px;
+}
+
+.time-note {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+.days-open {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.days-open li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+	font-size: 19px;
+    border-bottom: 1px dashed #ddd;
+	margin-left: 0px;
+}
+
+/**tuyet anh**/
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#D2B48C;
+    color:#5A1F0F;
+    padding:15px 30px;
+}
+.logo{
+    font-size:32px;
+    font-weight:bold;
+	
+}
+
+/* MENU (đã sửa phù hợp HTML mới) */
+nav a{
+    color:#5A1F0F;
+    margin-left:30px;
+    text-decoration:none;
+	font-size:28px;
+	font-weight: bold;
+	font-weight: italic;
+	font-family: Times;
+}
+
+nav a:hover{
+    color:#7A2E1B;
+}
+.social img{
+    width:80px;
+    margin:0 80px;
+	margin-top:15px;
+}  
+footer{
+    background:	#D2B48C;
+    color:#5A1F0F;
+    text-align:center;
+    padding:20px;
+	font-size:20px;
+}
+/* CONTENT */
+.content{
+    padding:50px;
+    text-align:center;
+	color:#5A1F0F;
+}
+
+/* ABOUT */
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("Fonts/Pacifico-Regular.ttf");
+}
+
+.about{
+    padding: 60px 8%;
+    background: #fffaf6;
+}
+
+.about-title{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Pacifico";
+    color: #432616;
+}
+
+.about-content{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-text{
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.about-text h2{
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #2E1503;
+    letter-spacing: 1px;
+}
+
+.about-text h4{
+    font-size: 28px;
+    margin: 40px 0 20px;
+    color: #5A1F0F;
+    font-weight: bold;
+}
+
+.about-text p{
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* ABOUT IMAGE */
+
+.about-img{
+    margin: 30px 0;
+    text-align: center;
+}
+
+.about-img img{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* TEAM */
+
+.team{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.member{
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.member:hover{
+    transform: translateY(-10px);
+}
+
+.member img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.member h3{
+    margin-top: 18px;
+    color: #5A1F0F;
+    font-size: 24px;
+}
+
+.member p{
+    color: #777;
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: center;
+}
